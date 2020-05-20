@@ -1,6 +1,7 @@
 # k8slove2020
 
 # date may 20 docker and k8s EXAM
+# Task 1
 # create Dockerfile
 vim Dockerfile
 ~~~
@@ -40,14 +41,50 @@ else
 
 fi 
 
-~~~
+
 
 
 # docker build command
+
 ~~~
 docker build -t mkmahto7/webapp .
 ~~~
 # push image to dockerhub
+
 ~~~
 docker login -u mkmahto7
 docker push mkmahto7/webapp
+~~~
+#Task 2:create POD File
+
+vim mypodwithenv.yml
+~~~
+apiVersion: v1
+kind: Pod
+metadata:
+ name: mukeshpodenv1
+ labels:
+  adhoc: mukeshenv
+
+spec:
+ containers:
+  - name: mukeshcc111
+    image: mkmahto7/webapp:latest
+    ports:
+     - containerPort: 80
+    env:   
+     - name: color 
+       value: yellow  
+~~~
+# creating POD 
+
+~~~
+ kubectl apply -f mypodwithenv.yml
+~~~
+# to get details of pod creation
+~~~
+kubectl get pods
+~~~
+
+
+
