@@ -1,22 +1,27 @@
+
+apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
- name: mukeshrs1
- labels:
-  app: rsweb1  #  this is the label of RC not label of pods
-
+  name: adhocmkmahto4
+  labels:
+    app: adhocmkmahto4
 spec:
- selector:
-  matchLabels:
-   x: mukeshrs    # here also label of pod
- replicas: 3  #  always one pod will be present even in case of current worker node failure
- template:
-  metadata:
-   name: mypodrs22  #  this will be the podname that will be created by RC
-   labels:
-    x: mukeshrs
-  spec:
-    containers:
-    - name: mukeshrs111
-      image: mkmahto7/webapp:latest
-      ports:
-       - containerPort: 80
+  replicas: 1
+  selector:
+    matchLabels:
+      adhoc: mkmahtoq4 
+  template:
+    metadata:
+      name: adhocpod4
+      labels:
+        adhoc: mkmahtoq4
+    spec:
+      containers:
+      - env:
+        - name: x
+          value: app2
+        image: mkmahto7/webapp
+        imagePullPolicy: Always
+        name: adhocpod4
+        ports:
+        - containerPort: 80
