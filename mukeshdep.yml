@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+  app: mukeshdep1
+  name: mukeshdep1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mukeshdep1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: mukeshdep1
+    spec:
+      containers:
+      - image: mkmahto7/webapp
+        name: mukeshccdeploy
+        env:
