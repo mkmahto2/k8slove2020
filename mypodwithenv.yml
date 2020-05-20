@@ -11,7 +11,7 @@ spec:
     image: mkmahto7/webapp:latest
     ports:
      - containerPort: 80
-    env:   #  this is for replacing the ENV variable in POD 
-     - name: color  #  this must be the same variable that we define in dockerfile under ENV keywork
-       value: yellow   #  this is replaced value 
+    env:   
+     - name: color 
+       value: yellow  
 
