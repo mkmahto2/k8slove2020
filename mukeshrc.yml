@@ -1,1 +1,21 @@
 
+apiVersion: v1
+kind: ReplicationController
+metadata:
+ name: myrcmukesh1
+ labels:
+  app: web1  #  this is the label of RC not label of pods
+
+spec:
+ replicas: 4  #  always one pod will be present even in case of current worker node failure
+ template:
+  metadata:
+   name: mypod11  #  this will be the podname that will be created by RC
+   labels:
+    adhoc: mukeshc1
+  spec:
+   containers:
+    - name: mukeshx111
+      image: mkmahto7/webapp:latest
+      ports:
+       - containerPort: 80
