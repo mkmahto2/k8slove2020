@@ -41,6 +41,7 @@ else
 
 fi 
 
+~~~
 
 
 
@@ -59,6 +60,8 @@ docker push mkmahto7/webapp
 
 vim mypodwithenv.yml
 ~~~
+
+~~~
 apiVersion: v1
 kind: Pod
 metadata:
@@ -75,6 +78,9 @@ spec:
     env:   
      - name: color 
        value: yellow  
+
+~~~
+
 ~~~
 # creating POD 
 
