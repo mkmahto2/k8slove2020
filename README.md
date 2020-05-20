@@ -56,8 +56,10 @@ docker build -t mkmahto7/webapp .
 docker login -u mkmahto7
 docker push mkmahto7/webapp
 ~~~
-#Task 2:create POD File
 
+# Task 2:create POD File
+
+~~~
 vim mypodwithenv.yml
 ~~~
 
@@ -81,12 +83,13 @@ spec:
 
 ~~~
 
-~~~
 # creating POD 
+
 
 ~~~
  kubectl apply -f mypodwithenv.yml
 ~~~
+
 # to get details of pod creation
 ~~~
 kubectl get pods
