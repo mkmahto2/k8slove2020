@@ -1,0 +1,16 @@
+   59 vim podwithenv.yml
+   60  kubectl create -f podwithenv.yml 
+   61  kubectl get po
+   62  kubectl expose mukeshpodenv1.yml --type LoadBalancer --port 80
+   63  kubectl expose pods mukeshpodenv1 --type LoadBalancer --port 80
+   64  kubectl get svc
+   65  history 
+   66  kubectl get pods --show-labels
+   67  vim podwithenv.yml
+   68  kubectl apply -f podwithenv.yml 
+   69  kubectl get pods --show-labels
+   70  vim podwithenv.yml
+   71  kubectl apply -f podwithenv.yml 
+   72  kubectl get pods --show-labels
+   73  kubectl delete pods mukeshpodenv1 
+   74  vim mukeshrc.yml
