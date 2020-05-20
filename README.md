@@ -45,6 +45,9 @@ fi
 
 # docker build command
 ~~~
-docker build -t mkmahto7/webapp
+docker build -t mkmahto7/webapp .
 ~~~
-
+# push image to dockerhub
+~~~
+docker login -u mkmahto7
+docker push mkmahto7/webapp
