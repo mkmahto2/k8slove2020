@@ -94,6 +94,40 @@ spec:
 ~~~
 kubectl get pods
 ~~~
+# TASK 4
+# Replica Set
+creating replica sets
 
+~~~
 
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: adhocmkmahto4
+  labels:
+    app: adhocmkmahto4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      adhoc: mkmahtoq4 
+  template:
+    metadata:
+      name: adhocpod4
+      labels:
+        adhoc: mkmahtoq4
+    spec:
+      containers:
+      - env:
+        - name: x
+          value: app2
+        image: mkmahto7/webapp
+        imagePullPolicy: Always
+        name: adhocpod4
+        ports:
+        - containerPort: 80
+
+~~~
+~~~
+kubectl apply -f mukeshrs.yml ~~~
 
